@@ -16,3 +16,22 @@ apt upgrade -y
 sudo shutdown -r now
 sudo reboot now
 ```
+# Automatische updates und co
+Cronjob für automatische Updates anlegen
+Öffne den Crontab für den Benutzer root (damit Update-Rechte kein Problem sind):
+
+```bash
+sudo crontab -e
+```
+Füge folgende Zeile ganz unten hinzu:
+```bash
+Code kopieren
+0 4 * * * apt update && apt upgrade -y >> /var/log/auto-updates.log 2>&1
+```
+✅ Bedeutung:
+
+```0 4 * * *``` → Täglich um 04:00 Uhr morgens
+
+```apt update && apt upgrade -y ```→ Sucht nach Updates und installiert sie
+
+```>> /var/log/auto-updates.log ```→ Protokolliert die Aktion in eine Logdatei
