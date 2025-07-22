@@ -11,3 +11,8 @@ sudo -s
 apt update
 apt upgrade -y
 ```
+## rebbot now
+```bash
+sudo shutdown -r now
+sudo reboot now
+```
