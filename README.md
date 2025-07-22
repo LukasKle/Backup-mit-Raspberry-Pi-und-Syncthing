@@ -35,3 +35,10 @@ Code kopieren
 ```apt update && apt upgrade -y ```→ Sucht nach Updates und installiert sie
 
 ```>> /var/log/auto-updates.log ```→ Protokolliert die Aktion in eine Logdatei
+## Optional: Auch nicht automatisch installierbare Updates (Reboot etc.)
+Wenn du zusätzlich Kernel-Updates etc. automatisch einspielen willst, kannst du auch unattended-upgrades aktivieren.
+
+```bash
+sudo apt install unattended-upgrades
+sudo dpkg-reconfigure unattended-upgrades
+```
