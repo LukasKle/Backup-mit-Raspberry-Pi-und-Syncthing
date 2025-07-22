@@ -2,8 +2,10 @@
 Backup mit Raspberry Pi und Syncthing
 
 ## SSH Verbindung
+```bash
 ssh lukas@raspberrypi.local
-upgrade und update
+```
+## upgrade und update
 ```bash
 sudo -s
 apt update
